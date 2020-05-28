@@ -80,7 +80,7 @@ class ViewController: UIViewController, EasyTipViewDelegate {
             let text = "<p><strong>EasyTipView</strong> is an easy to use tooltip view. It can point to any UIView or UIBarItem subclasses. Tap the buttons to see other tooltips.</p>"
             
             do {
-                let attributedText = try NSAttributedString(data: (text as NSString).data(using: String.Encoding.utf8.rawValue)!, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil)
+                let attributedText = try NSAttributedString(data: (text as NSString).data(using: String.Encoding.utf8.rawValue)!, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil)
                 let tip = EasyTipView(attributedText: attributedText, delegate: self)
                 tip.show(forItem: toolbarItem)
                 tipView = tip
@@ -106,7 +106,7 @@ class ViewController: UIViewController, EasyTipViewDelegate {
             preferences.animating.dismissDuration = 1
             
             do {
-                let attributedText = try NSAttributedString(data: ("<p>Tip view within the green superview. <strong>Tap to dismiss.</strong></p>" as NSString).data(using: String.Encoding.utf8.rawValue)!, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil)
+                let attributedText = try NSAttributedString(data: ("<p>Tip view within the green superview. <strong>Tap to dismiss.</strong></p>" as NSString).data(using: String.Encoding.utf8.rawValue)!, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil)
                 let view = EasyTipView(attributedText: attributedText, preferences: preferences)
                 view.show(forView: buttonA, withinSuperview: self.smallContainerView)
             } catch {
