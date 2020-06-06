@@ -257,7 +257,7 @@ open class EasyTipView: UIView {
     fileprivate weak var delegate: EasyTipViewDelegate?
     fileprivate var arrowTip = CGPoint.zero
     fileprivate(set) open var preferences: Preferences
-    open let attributedText: NSAttributedString
+    public let attributedText: NSAttributedString
     
     // MARK: - Lazy variables -
     
@@ -288,7 +288,7 @@ open class EasyTipView: UIView {
     
     // MARK: - Static variables -
     
-    open static var globalPreferences = Preferences()
+    public static var globalPreferences = Preferences()
     
     // MARK:- Initializer -
     
@@ -304,7 +304,7 @@ open class EasyTipView: UIView {
         super.init(frame: CGRect.zero)
         
         self.backgroundColor = UIColor.clear
-        NotificationCenter.default.addObserver(self, selector: #selector(handleRotation), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleRotation), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     
     public init (attributedText: NSAttributedString, preferences: Preferences = EasyTipView.globalPreferences, delegate: EasyTipViewDelegate? = nil){
@@ -316,7 +316,7 @@ open class EasyTipView: UIView {
         super.init(frame: CGRect.zero)
         
         self.backgroundColor = UIColor.clear
-        NotificationCenter.default.addObserver(self, selector: #selector(handleRotation), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleRotation), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     
     deinit

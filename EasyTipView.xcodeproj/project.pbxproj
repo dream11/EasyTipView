@@ -154,7 +154,7 @@
 				TargetAttributes = {
 					1310EC8A1D0C537F0000E71E = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1140;
 						ProvisioningStyle = Automatic;
 					};
 					1310EC941D0C53800000E71E = {
@@ -168,6 +168,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 1310EC811D0C537F0000E71E;
@@ -344,7 +345,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -366,7 +367,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.teodorpatras.EasyTipView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
